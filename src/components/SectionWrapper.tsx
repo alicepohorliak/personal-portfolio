@@ -1,5 +1,7 @@
-import React from 'react';
-import { Box, useTheme, useMediaQuery } from '@mui/material';
+import React from "react";
+
+import Box from "@mui/material/Box";
+import { useTheme, useMediaQuery } from "@mui/material";
 
 type SectionWrapperProps = {
   children: React.ReactNode;
@@ -7,13 +9,15 @@ type SectionWrapperProps = {
 
 const SectionWrapper = ({ children }: SectionWrapperProps) => {
   const theme = useTheme();
-  const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <Box
       sx={{
-        paddingTop: isMdUp ? '40px' : '24px',    
-        paddingBottom: isMdUp ? '40px' : '24px',  
+        width: "100%",
+        paddingTop: isMdUp ? "24px" : "16px",
+        paddingBottom: isMdUp ? "24px" : "16px",
+        px: { xs: 2, md: 6 },
       }}
     >
       {children}

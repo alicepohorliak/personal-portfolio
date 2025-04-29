@@ -58,12 +58,20 @@ const Testimonials = () => {
         </Typography>
 
         <Swiper
-          spaceBetween={-150}
-          slidesPerView={1.7}
           centeredSlides={true}
           loop={true}
           pagination={{ clickable: true }}
           modules={[Pagination]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 16,
+            },
+            768: {
+              slidesPerView: 1.7,
+              spaceBetween: 32,
+            },
+          }}
           style={{ width: "100%", paddingBottom: 50 }}
         >
           {extendedTestimonials.map((testimonial, index) => (

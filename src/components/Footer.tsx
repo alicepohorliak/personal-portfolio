@@ -1,8 +1,6 @@
 import React from "react";
-
 import { Box, Typography, Button, IconButton } from "@mui/material";
 import { Facebook, Twitter, Instagram, LinkedIn } from "@mui/icons-material";
-
 import navItems from "../data/navItems";
 
 const Footer = () => {
@@ -29,37 +27,36 @@ const Footer = () => {
             justifyContent: "center",
             alignItems: "center",
             mb: 5,
-            flexDirection: { xs: "column", sm: "row" },
           }}
         >
-          <Box
+          <Typography
             sx={{
-              bgcolor: "#FF5722",
-              color: "#fff",
-              fontWeight: 700,
               fontSize: 26,
-              px: 1,
-              py: 0.5,
-              borderRadius: "2px",
+              fontWeight: 700,
+              fontFamily: "Poppins, sans-serif",
               display: "flex",
               alignItems: "center",
-              justifyContent: "center",
-              mb: { xs: 1, sm: 0 },
-            }}
-          >
-            M
-          </Box>
-          <Typography
-            component="span"
-            sx={{
-              ml: { xs: 0, sm: 0.3 },
-              fontSize: 26,
-              fontWeight: 700,
+              gap: 0.5,
               color: "#000",
-              fontFamily: "Poppins, sans-serif",
-              lineHeight: 1,
             }}
           >
+            <Box
+              component="span"
+              sx={{
+                bgcolor: "#FF5722",
+                color: "#fff",
+                fontWeight: 700,
+                fontSize: 26,
+                px: 1,
+                py: 0.5,
+                borderRadius: "2px",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              M
+            </Box>
             uhammad
           </Typography>
         </Box>

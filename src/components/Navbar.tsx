@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import {
   AppBar,
   Toolbar,
@@ -13,7 +12,6 @@ import {
   ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-
 import navItems from "../data/navItems";
 
 const Navbar = () => {
@@ -71,8 +69,19 @@ const Navbar = () => {
             maxWidth: 1600,
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Typography
+            sx={{
+              fontSize: 26,
+              fontWeight: 700,
+              fontFamily: "Poppins, sans-serif",
+              display: "flex",
+              alignItems: "center",
+              gap: 0.5,
+              color: "#000",
+            }}
+          >
             <Box
+              component="span"
               sx={{
                 bgcolor: "#FF5722",
                 color: "#fff",
@@ -81,27 +90,15 @@ const Navbar = () => {
                 px: 1,
                 py: 0.5,
                 borderRadius: "2px",
-                display: "flex",
+                display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
               M
             </Box>
-            <Typography
-              component="span"
-              sx={{
-                ml: 0.3,
-                fontSize: 26,
-                fontWeight: 700,
-                color: "#000",
-                fontFamily: "Poppins, sans-serif",
-                lineHeight: 1,
-              }}
-            >
-              uhammad
-            </Typography>
-          </Box>
+            uhammad
+          </Typography>
 
           <Box
             sx={{

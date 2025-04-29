@@ -22,6 +22,7 @@ const Projects = () => {
   return (
     <SectionWrapper>
       <Box
+        id="projects"
         sx={{
           backgroundColor: "#fff",
           display: "flex",
@@ -36,7 +37,7 @@ const Projects = () => {
       >
         <Typography
           sx={{
-            fontSize: 42,
+            fontSize: { xs: 32, md: 42 },
             fontWeight: 700,
             textAlign: "center",
             fontFamily: "Poppins, sans-serif",
@@ -96,7 +97,7 @@ const Projects = () => {
         </Box>
 
         {shouldShowProjects && (
-          <Grid container spacing={4} justifyContent="center">
+          <Grid container spacing={{ xs: 3, md: 4 }} justifyContent="center">
             {filteredProjects.slice(0, 3).map((project, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <Box sx={{ textAlign: "left" }}>
@@ -106,9 +107,10 @@ const Projects = () => {
                     alt={project.title}
                     sx={{
                       width: "100%",
-                      height: "auto",
+                      height: { xs: 220, md: "auto" },
+                      objectFit: "cover",
                       borderRadius: "12px",
-                      mb: 1.5,
+                      mb: 2,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
                     }}
                   />

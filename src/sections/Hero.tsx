@@ -12,17 +12,19 @@ import { heroContent } from "../data/heroContent";
 const Hero = () => {
   return (
     <Box
+      id="hero"
       sx={{
         backgroundColor: "#fff",
         display: "flex",
         flexDirection: { xs: "column-reverse", md: "row" },
         alignItems: "center",
         justifyContent: "space-between",
-        px: { xs: 3, md: 10 },
-        py: { xs: 6, md: 10 },
+        px: { xs: 2, sm: 4, md: 10 },
+        py: { xs: 4, sm: 6, md: 10 },
         width: "100%",
         maxWidth: 1600,
         mx: "auto",
+        gap: { xs: 6, md: 0 },
       }}
     >
       <Box
@@ -33,6 +35,7 @@ const Hero = () => {
           flexDirection: "column",
           justifyContent: "center",
           ml: { xs: 0, md: 6 },
+          textAlign: { xs: "center", md: "left" },
         }}
       >
         <Typography
@@ -61,7 +64,7 @@ const Hero = () => {
 
         <Typography
           sx={{
-            fontSize: { xs: 46, md: 60 },
+            fontSize: { xs: 36, sm: 46, md: 60 },
             fontWeight: 800,
             color: "#000",
             lineHeight: 1.2,
@@ -71,7 +74,10 @@ const Hero = () => {
         >
           UI & UX
           <br />
-          <Box component="span" sx={{ display: "inline-block", pl: 17 }}>
+          <Box
+            component="span"
+            sx={{ display: "inline-block", pl: { xs: 0, md: 17 } }}
+          >
             Designer
           </Box>
         </Typography>
@@ -82,33 +88,41 @@ const Hero = () => {
             color: "#000",
             fontWeight: 400,
             mb: 4,
-            maxWidth: 450,
+            maxWidth: { xs: "100%", md: 450 },
+            mx: { xs: "auto", md: "0" },
             fontFamily: "Poppins, sans-serif",
           }}
         >
           {heroContent.description}
         </Typography>
 
-        <Button
-          variant="contained"
+        <Box
           sx={{
-            bgcolor: "#FF5722",
-            color: "#fff",
-            borderRadius: "6px",
-            px: 3,
-            py: 1.2,
-            textTransform: "none",
-            fontWeight: 600,
-            fontSize: 15,
-            fontFamily: "Poppins, sans-serif",
-            "&:hover": {
-              bgcolor: "#e64a19",
-            },
-            width: "120px",
+            display: "flex",
+            justifyContent: { xs: "center", md: "flex-start" },
           }}
         >
-          {heroContent.buttonText}
-        </Button>
+          <Button
+            variant="contained"
+            sx={{
+              bgcolor: "#FF5722",
+              color: "#fff",
+              borderRadius: "6px",
+              px: 3,
+              py: 1.2,
+              textTransform: "none",
+              fontWeight: 600,
+              fontSize: 15,
+              fontFamily: "Poppins, sans-serif",
+              "&:hover": {
+                bgcolor: "#e64a19",
+              },
+              width: "120px",
+            }}
+          >
+            {heroContent.buttonText}
+          </Button>
+        </Box>
       </Box>
 
       <Box
@@ -130,7 +144,7 @@ const Hero = () => {
             mt: 4,
             display: "flex",
             justifyContent: "center",
-            gap: 3,
+            gap: 1.5,
           }}
         >
           <IconButton color="inherit">

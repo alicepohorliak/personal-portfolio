@@ -13,6 +13,7 @@ const Services = () => {
   return (
     <SectionWrapper>
       <Box
+        id="services"
         sx={{
           backgroundColor: "#fff",
           display: "flex",
@@ -29,7 +30,7 @@ const Services = () => {
       >
         <Typography
           sx={{
-            fontSize: 40,
+            fontSize: { xs: 32, md: 40 },
             fontWeight: 600,
             color: "#000",
             mb: 2,
@@ -47,6 +48,7 @@ const Services = () => {
             maxWidth: 600,
             mb: 6,
             fontFamily: "Poppins, sans-serif",
+            textAlign: "center",
           }}
         >
           Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit
@@ -59,11 +61,11 @@ const Services = () => {
               <Card
                 elevation={0}
                 sx={{
-                  px: 2,
-                  py: 4,
+                  px: 3,
+                  py: 5,
                   backgroundColor: "#f5f5f5",
                   textAlign: "center",
-                  borderRadius: "12px",
+                  borderRadius: "16px",
                   border: "1px solid #eee",
                   height: "100%",
                   display: "flex",
@@ -83,14 +85,14 @@ const Services = () => {
                   sx={{
                     width: 60,
                     height: 60,
-                    mb: 2,
+                    mb: 3,
                     objectFit: "contain",
                   }}
                 />
                 <CardContent sx={{ p: 0 }}>
                   <Typography
                     sx={{
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: 600,
                       color: "#000",
                       fontFamily: "Poppins, sans-serif",
@@ -101,7 +103,7 @@ const Services = () => {
                   </Typography>
                   <Typography
                     sx={{
-                      fontSize: 13,
+                      fontSize: 14,
                       color: "#000",
                       fontWeight: 400,
                       fontFamily: "Poppins, sans-serif",

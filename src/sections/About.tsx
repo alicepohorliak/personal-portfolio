@@ -37,17 +37,19 @@ const About = () => {
   return (
     <SectionWrapper>
       <Box
+        id="about"
         sx={{
           backgroundColor: "#fff",
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
           justifyContent: "space-between",
-          px: { xs: 3, md: 10 },
-          py: { xs: 6, md: 10 },
+          px: { xs: 2, sm: 4, md: 10 },
+          py: { xs: 4, sm: 6, md: 10 },
           width: "100%",
           maxWidth: 1600,
           mx: "auto",
+          gap: { xs: 6, md: 0 },
         }}
       >
         <Box
@@ -55,6 +57,7 @@ const About = () => {
             flex: 1,
             maxWidth: 460,
             ml: { xs: 0, md: 6 },
+            textAlign: { xs: "center", md: "left" },
           }}
         >
           <img
@@ -72,6 +75,7 @@ const About = () => {
             flexDirection: "column",
             justifyContent: "center",
             mr: { xs: 0, md: 6 },
+            textAlign: { xs: "center", md: "left" },
           }}
         >
           <Typography
@@ -92,16 +96,24 @@ const About = () => {
               color: "#000",
               fontWeight: 400,
               mb: 4,
-              maxWidth: 450,
+              maxWidth: { xs: "100%", md: 450 },
+              mx: { xs: "auto", md: 0 },
               fontFamily: "Poppins, sans-serif",
             }}
           >
             {aboutContent.description}
           </Typography>
 
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 3,
+              alignItems: { xs: "center", md: "flex-start" },
+            }}
+          >
             {skills.map((skill) => (
-              <Box key={skill.label}>
+              <Box key={skill.label} sx={{ width: "100%", maxWidth: 450 }}>
                 <Typography
                   sx={{
                     fontSize: 16,
